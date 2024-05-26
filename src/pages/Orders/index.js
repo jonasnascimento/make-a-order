@@ -18,7 +18,7 @@ const navigate = useNavigate();
 useEffect(() => {
 const fetchOrders = async () => {
   try{
-    const response = await axios.get("http://localhost:3002/orders");
+    const response = await axios.get(`${process.env.REACT_APP_API_URL}/orders`);
 setOrders(response.data);
   } catch (error) {
     console.error("Erro ao buscar pedidos:", error);

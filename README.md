@@ -1,70 +1,107 @@
-# Getting Started with Create React App
+# Sistema de Pedidos
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este é um sistema de pedidos simples construído com React para o front-end e Node.js para o back-end. A aplicação permite criar novos pedidos e visualizar a lista de pedidos existentes.
 
-## Available Scripts
+## Tecnologias Utilizadas
 
-In the project directory, you can run:
+- React
+- React Router DOM
+- Styled Components
+- Axios
+- Node.js
+- Express
+- UUID
+- Cors
 
-### `yarn start`
+## Estrutura do Projeto
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- `src/`: Contém o código fonte do front-end.
+  - `pages/`: Contém as páginas principais da aplicação.
+    - `Home`: Página inicial onde os pedidos são criados.
+    - `Orders`: Página de visualização dos pedidos.
+  - `Assets/`: Contém imagens e outros ativos.
+  - `styles/`: Contém os estilos globais.
+  - `routes.js`: Define as rotas do front-end.
+- `server/`: Contém o código fonte do back-end.
+  - `index.js`: Arquivo principal do servidor.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Instalação
 
-### `yarn test`
+### Pré-requisitos
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js instalado
+- npm ou yarn instalado
 
-### `yarn build`
+### Passos para rodar o projeto
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone o repositório:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    ```sh
+    git clone https://github.com/seu-usuario/seu-repositorio.git
+    cd seu-repositorio
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Instale as dependências do front-end:
 
-### `yarn eject`
+    ```sh
+    cd src
+    npm install
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Instale as dependências do back-end:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    ```sh
+    cd ../server
+    npm install
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. Inicie o servidor:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    ```sh
+    npm start
+    ```
 
-## Learn More
+5. Inicie o front-end:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    Abra um novo terminal e execute:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    ```sh
+    cd ../src
+    npm start
+    ```
 
-### Code Splitting
+O projeto estará disponível em `http://localhost:3000` e a API em `http://localhost:3002`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Endpoints da API
 
-### Analyzing the Bundle Size
+- `GET /orders`: Retorna todos os pedidos.
+- `POST /orders`: Cria um novo pedido.
+- `DELETE /orders/:id`: Deleta um pedido existente.
+  - Body (JSON):
+    ```json
+    {
+      "order": "Nome do Pedido",
+      "clientName": "Nome do Cliente",
+      "price": "Preço do Pedido"
+    }
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Funcionalidades
 
-### Making a Progressive Web App
+### Página Inicial (Home)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Permite criar um novo pedido preenchendo os campos de "Pedido" e "Nome do Cliente".
+- Ao clicar em "Novo Pedido" ou pressionar a tecla Enter, o pedido é enviado para a API e a aplicação navega para a página de pedidos.
 
-### Advanced Configuration
+### Página de Pedidos (Orders)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Exibe a lista de pedidos existentes.
+- Permite voltar para a página inicial clicando no botão "Voltar".
 
-### Deployment
+## Autor
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- [Jonas Soares](https://github.com/jonasnascimento)
 
-### `yarn build` fails to minify
+## Licença
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Este projeto está licenciado sob a [MIT License](LICENSE).

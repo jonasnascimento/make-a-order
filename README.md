@@ -34,8 +34,7 @@ Este é um sistema de pedidos construído com React para o front-end e Node.js p
     ```json
     {
       "order": "Nome do Pedido",
-      "clientName": "Nome do Cliente",
-      "price": "Preço do Pedido"
+      "clientName": "Nome do Cliente"
     }
     ```
 

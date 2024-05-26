@@ -33,7 +33,6 @@ function App() {
       console.error("Erro ao criar novo pedido:", error);
     }
   }
-
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
       handleNewOrder();

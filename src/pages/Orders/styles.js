@@ -56,20 +56,20 @@ export const Order = styled.li`
     background: none;
     border: none;
     cursor: pointer;
-    width: 75px;
-  }
+}
 
   div {
     display: flex;
     color: #ffffff;
     font-size: 18px;
     font-weight: 300;
-    line-height: 28px;
+    line-height: 28px;   
   }
 
   .clientName {
     font-size: 18px;
     font-weight: bold;
     color: white;
+    width: 350px;
   }
 `;

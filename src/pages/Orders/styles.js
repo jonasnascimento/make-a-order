@@ -56,6 +56,7 @@ export const Order = styled.li`
     background: none;
     border: none;
     cursor: pointer;
+    width: 75px;
   }
 
   div {

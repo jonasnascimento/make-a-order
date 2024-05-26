@@ -26,7 +26,7 @@ function App() {
     };
 
     try {
-      await axios.post("http://localhost:3002/orders", newOrder);
+      await axios.post(`${process.env.REACT_APP_API_URL}/orders`, newOrder);
       navigate("/orders");
     } catch (error) {
       console.error("Erro ao criar novo pedido:", error);

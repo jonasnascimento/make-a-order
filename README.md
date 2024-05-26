@@ -1,6 +1,6 @@
 # Sistema de Pedidos
 
-Este é um sistema de pedidos simples construído com React para o front-end e Node.js para o back-end. A aplicação permite criar novos pedidos e visualizar a lista de pedidos existentes.
+Este é um sistema de pedidos construído com React para o front-end e Node.js para o back-end. A aplicação permite criar novos pedidos e visualizar a lista de pedidos existentes.
 
 ## Tecnologias Utilizadas
 
@@ -24,53 +24,6 @@ Este é um sistema de pedidos simples construído com React para o front-end e N
   - `routes.js`: Define as rotas do front-end.
 - `server/`: Contém o código fonte do back-end.
   - `index.js`: Arquivo principal do servidor.
-
-## Instalação
-
-### Pré-requisitos
-
-- Node.js instalado
-- npm ou yarn instalado
-
-### Passos para rodar o projeto
-
-1. Clone o repositório:
-
-    ```sh
-    git clone https://github.com/seu-usuario/seu-repositorio.git
-    cd seu-repositorio
-    ```
-
-2. Instale as dependências do front-end:
-
-    ```sh
-    cd src
-    npm install
-    ```
-
-3. Instale as dependências do back-end:
-
-    ```sh
-    cd ../server
-    npm install
-    ```
-
-4. Inicie o servidor:
-
-    ```sh
-    npm start
-    ```
-
-5. Inicie o front-end:
-
-    Abra um novo terminal e execute:
-
-    ```sh
-    cd ../src
-    npm start
-    ```
-
-O projeto estará disponível em `http://localhost:3000` e a API em `http://localhost:3002`.
 
 ## Endpoints da API
 

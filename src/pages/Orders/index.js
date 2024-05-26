@@ -30,7 +30,7 @@ fetchOrders();
 
 const handleDeleteOrder = async (id) => {
   try {
-    await axios.delete(`http://localhost:3002/orders/${id}`);
+    await axios.delete(`${process.env.REACT_APP_API_URL}/orders/${id}`);
     setOrders((prevOrders) => prevOrders.filter((order) => order.id !== id));
   } catch (error) {
     console.error("Erro ao deletar pedido:", error);
